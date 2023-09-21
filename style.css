@@ -37,3 +37,14 @@ main {
     grid-area: 1 / 1 / 4 / 4;
     display: none;
 }
+
+#proj1 li:before {
+    content:"\2714\0020";
+}
+
+.sublist1 {
+    padding-left: 1em;
+}
+#sublistProj1 li:before {
+    content:"\2611\0020";
+}

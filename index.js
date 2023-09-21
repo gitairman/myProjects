@@ -18,6 +18,9 @@ toggleProjList = function() {
     else {
         navProj.hidden = true;
         projList.style.backgroundColor = 'lightblue';
+        for (let i = 0; i < projDetail.length; i++) {
+            projDetail[i].style.display = "none";
+        }
     }
 }
 projFocus = function(evt) {
