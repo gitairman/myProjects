@@ -7,35 +7,34 @@ projNames.forEach(function(proj){
 });
 
 navProj = document.getElementById("navProjects");
+navProj.style.visibility = "hidden";
 projList = document.getElementById("projList");
-navProj.hidden = true;
 
 toggleProjList = function() {
-    if (navProj.hidden == true) {
-        navProj.hidden = false;
+    if (navProj.style.visibility == "hidden") {
+        navProj.style.visibility = "visible";
         projList.style.backgroundColor = 'lightgray';
     }
     else {
-        navProj.hidden = true;
+        navProj.style.visibility = "hidden";
         projList.style.backgroundColor = 'lightblue';
         for (let i = 0; i < projDetail.length; i++) {
-            projDetail[i].style.display = "none";
+            projDetail[i].style.visibility = "hidden";
         }
     }
 }
 projFocus = function(evt) {
     let idx = projLinks.indexOf(evt.target);
-    projDetail[idx].style.display = "grid";
+    projDetail[idx].style.visibility = "visible";
     for (let i = 0; i < projDetail.length; i++) {
         if (i == idx) {
             continue;
         }
-        projDetail[i].style.display = "none";
+        projDetail[i].style.visibility = "hidden";
     }
 }
 projSelect = function(evt) {
     projFocus(evt);
-    navProj.hidden = true;
 }
 
 projList.addEventListener('mousedown', toggleProjList);
