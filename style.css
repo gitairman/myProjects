@@ -1,5 +1,41 @@
+body {
+    display: grid;
+    grid-template: 
+                "a a a a" auto
+                "b b c c" auto
+                "d d d d" auto / 1fr 1fr 1fr 1fr;
+}
+main {
+    grid-area: 1 / 1 / 2 / 5;
+}
+h1, h2, #navBar {
+    text-align: center;
+}
+
+#navBar li {
+    display: inline;
+    padding: 1rem;
+}
+
+.idxSections {
+    
+}
+
+#meBrief {
+    grid-area: 2 / 1 / 3 / 3
+}
+
+#meBrief ul {
+    padding-left: 1rem;
+    list-style: outside;
+}
+
+#featProjects {
+    grid-area: 2 / 3 / 3 / 5
+}
+
 ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -18,23 +54,23 @@ main {
 }
 
 #proj1 {
-    grid-area: 1 / 1 / 4 / 4;
+    grid-area: 3 / 1 / 4 / 4;
     display: none;
 }
 #proj2 {
-    grid-area: 1 / 1 / 4 / 4;
+    grid-area: 3 / 1 / 4 / 4;
     display: none;
 }
 #proj3 {
-    grid-area: 1 / 1 / 4 / 4;
+    grid-area: 3 / 1 / 4 / 4;
     display: none;
 }
 #proj4 {
-    grid-area: 1 / 1 / 4 / 4;
+    grid-area: 3 / 1 / 4 / 4;
     display: none;
 }
 #proj5 {
-    grid-area: 1 / 1 / 4 / 4;
+    grid-area: 3 / 1 / 4 / 4;
     display: none;
 }
 
